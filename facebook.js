@@ -60,6 +60,49 @@ function post() {
         });
 }
 
+function Process() {
+    
+    FB.api("/me/friends",
+           function(response) {
+                if (response.error) {
+                    alert(response.error.message);
+                } else {
+                    // send Length()
+                    processUser("me");
+                    for (int i = 0; i < response.data.length; i++)
+                        processUser(data[i].id);
+                }
+           });          
+}
+
+function processUser(id) {
+    FB.api('/' + id + '?fields=id,birthday,education,gender,location,hometown,location,political,religion,favorite_teams',
+           function (response0) {
+               FB.api('/' + id + '/books',
+                      function (response1) {
+                          FB.api('/' + id + '/music',
+                                 function (response2) {
+                                     FB.api('/' + id + 'movies',
+                                            function (response3) {
+                                                FB.api('/' + id + '/television',
+                                                       function (response4) {
+                                                           processResponse(id, response0, response1, response2, response3, response4);
+                                                       });
+                                            });
+                                 });
+                      });
+           });     
+}
+
+function processResponse(id, response0, response1, response2, response3, response4) {
+    alert(response0);
+    alert(response1);
+    alert(response2);
+    alert(response3);
+    alert(response4);
+    // send data
+}
+
 function test() {
     FB.api(
         "/me?fields=id,birthday,education,gender,location,hometown,location,political,religion",
