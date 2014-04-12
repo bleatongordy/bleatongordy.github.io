@@ -72,6 +72,8 @@ function setLength(len) {
 }
 
 function addUser(data) {
+    alert('Function addUser()');
+    
     var Current = new Array();
     Current[0] = data['name'];
     Current[1] = data['id'];
