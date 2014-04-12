@@ -60,6 +60,7 @@ function post() {
         });
 }
 
+/*
 function processUser(id) {}
 
 function Process() {
@@ -71,9 +72,9 @@ function Process() {
             } else {
                 // send Length()
                 alert(JSON.stringify(response);
- //               processUser('me');
-//                for (int i = 0; i < response.data.length; i++)
-//                    processUser(data[i].id);
+                processUser('me');
+                for (int i = 0; i < response.data.length; i++)
+                    processUser(data[i].id);
             }
         });          
 }
