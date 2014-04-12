@@ -60,26 +60,19 @@ function post() {
         });
 }
 
-/*
-function processUser(id) {}
 
-function Process() {
-    FB.api(
-        '/me/friends',
-        function(response) {
-            if (!response || response.error) {
-                alert(JSON.stringify(response));
-            } else {
-                // send Length()
-                alert(JSON.stringify(response);
-                processUser('me');
-                for (int i = 0; i < response.data.length; i++)
-                    processUser(data[i].id);
-            }
-        });          
+
+function processResponse(id, response0, response1, response2, response3, response4) {
+    alert(JSON.stringify(response0));
+    alert(JSON.stringify(response1));
+    alert(JSON.stringify(response2));
+    alert(JSON.stringify(response3));
+    alert(JSON.stringify(response4));
+    // send data
 }
 
 /*
+
 function processUser(id) {
     FB.api('/' + id + '?fields=id,birthday,education,gender,location,hometown,location,political,religion,favorite_teams',
            function (response0) {
@@ -99,13 +92,22 @@ function processUser(id) {
            });     
 }
 
-function processResponse(id, response0, response1, response2, response3, response4) {
-    alert(response0);
-    alert(response1);
-    alert(response2);
-    alert(response3);
-    alert(response4);
-    // send data
+
+
+function retrieveData() {
+    FB.api(
+        '/me/friends',
+        function(response) {
+            if (!response || response.error) {
+                alert(JSON.stringify(response));
+            } else {
+                // send Length()
+                alert(JSON.stringify(response);
+                processUser('me');
+                for (int i = 0; i < response.data.length; i++)
+                    processUser(data[i].id);
+            }
+        });          
 }
 */
 
