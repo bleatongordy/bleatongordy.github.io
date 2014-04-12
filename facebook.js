@@ -60,6 +60,7 @@ function post() {
         });
 }
 
+/*
 function Process() {
     
     FB.api("/me/friends",
@@ -102,6 +103,7 @@ function processResponse(id, response0, response1, response2, response3, respons
     alert(response4);
     // send data
 }
+*/
 
 function test() {
     FB.api(
