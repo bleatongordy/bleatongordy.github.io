@@ -60,22 +60,26 @@ function post() {
         });
 }
 
-/*
+
 function Process() {
     
-    FB.api("/me/friends",
+    FB.api('/me/friends',
            function(response) {
                 if (response.error) {
                     alert(response.error.message);
                 } else {
                     // send Length()
-                    processUser("me");
+                    alert(JSON.stringify(response);
+                    processUser('me');
                     for (int i = 0; i < response.data.length; i++)
                         processUser(data[i].id);
                 }
            });          
 }
 
+function processUser(id) {}
+
+/*
 function processUser(id) {
     FB.api('/' + id + '?fields=id,birthday,education,gender,location,hometown,location,political,religion,favorite_teams',
            function (response0) {
