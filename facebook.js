@@ -94,39 +94,102 @@ function processResponse(response0, response1, response2, response3, response4) 
     alert(response4.data.length);
     
     var data = new Array();
-    data['name'] = response0.name;
-    data['id'] = response0.id;
-    data['birthday'] = response0.birthday;
-    data['gender'] = response0.gender;
-    data['education'] = new Array();
-    for(var i = 0; i < response0.education.length; i++)
-        data['education'][i] = response0.education[i].name;
-    data['location'] = response0.location.name;
-    data['hometown'] = response0.hometown.name;
-    data['religion'] = response0.religion;
-    data['politics'] = response0.political;
-    data['sports'] = new Array();
-    for(var i = 0; i < response0.favorite_teams.length; i++)
-        data['sports'][i] = response0.favorite_teams[i].name;
     
-    data['books'] = new Array();
-    for(var i = 0; i < response1.data.length; i++)
-        data['books'][i] = response1.data[i].name;
+    if (response0.hasOwnProperty('name'))
+        data['name'] = response0.name;
+    else
+        data['name'] = '';
     
-    data['movies'] = new Array();
-    for(var i = 0; i < response2.data.length; i++)
-        data['movies'][i] = response2.data[i].name;
+    if (response0.hasOwnProperty('id'))
+        data['id'] = response0.id;
+    else
+        data['id'] = '';
     
-    data['music'] = new Array();
-    for(var i = 0; i < response3.data.length; i++)
-        data['music'][i] = response3.data[i].name;
+    if (response0.hasOwnProperty('birthday'))
+        data['birthday'] = response0.birthday;
+    else
+        data['birthday'] = '';
     
-    data['television'] = new Array();
-    for(var i = 0; i < response4.data.length; i++)
-        data['television'][i] = response4.data[i].name;
+    if (response0.hasOwnProperty('gender'))
+        data['gender'] = response0.gender;
+    else
+        data['gender'] = '';
+    
+    if (response0.hasOwnProperty('education'))
+    {
+        data['education'] = new Array();
+        for(var i = 0; i < response0.education.length; i++)
+            data['education'][i] = response0.education[i].name;
+    } else {
+        data['education'] = '';
+    }
+    
+    if (response0.hasOwnProperty('location'))
+        data['location'] = response0.location.name;
+    else 
+        data['location'] = '';
+    
+    if (response0.hasOwnProperty('hometown'))
+        data['hometown'] = response0.hometown.name;
+    else
+        data['hometown'] = '';
+    
+    if (response0.hasOwnProperty('religion'))
+        data['religion'] = response0.religion;
+    else
+        data['religion'] = '';
+    
+    if (response0.hasOwnProperty('political'))
+        data['politics'] = response0.political;
+    else
+        data['politics'] = '';
+    
+    if (response0.hasOwnProperty('favorite_teams'))
+    {
+        data['sports'] = new Array();
+        for(var i = 0; i < response0.favorite_teams.length; i++)
+            data['sports'][i] = response0.favorite_teams[i].name;
+    } else {
+        data['sports'] = '';
+    }
+    
+    if (response1.hasOwnProperty('data'))
+    {
+        data['books'] = new Array();
+        for(var i = 0; i < response1.data.length; i++)
+            data['books'][i] = response1.data[i].name;
+    } else {
+        data['books'] = '';
+    }
+    
+    if (response2.hasOwnProperty('data'))
+    {
+        data['movies'] = new Array();
+        for(var i = 0; i < response2.data.length; i++)
+            data['movies'][i] = response2.data[i].name;
+    } else {
+        data['movies'] = '';
+    }
+    
+    if (response3.hasOwnProperty('data'))
+    {
+        data['music'] = new Array();
+        for(var i = 0; i < response3.data.length; i++)
+            data['music'][i] = response3.data[i].name;
+    } else {
+        data['music'] = '';
+    }
+    
+    if (response4.hasOwnProperty('data'))
+    {
+        data['television'] = new Array();
+        for(var i = 0; i < response4.data.length; i++)
+            data['television'][i] = response4.data[i].name;
+    } else {
+        data['television'] = '';
+    }
     
     alert('hello');
-    alert(data['television'][0]);
     alert(data['music'][0]);
     
     return data;
