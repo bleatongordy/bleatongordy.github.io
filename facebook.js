@@ -75,9 +75,9 @@ function processUser(id) {
     FB.api(
         '/' + id + '?fields=id,birthday,education,gender,location,hometown,location,political,religion,favorite_teams',
         function (response0) {
-           FB.api(
+            FB.api(
                '/' + id + '/books',
-              function (response1) {
+                function (response1) {
                   FB.api(
                       '/' + id + '/music',
                      function (response2) {
@@ -94,7 +94,7 @@ function processUser(id) {
               });
         });     
 }
-/*
+
 function retrieveData() {
     FB.api(
         '/me/friends',
@@ -106,11 +106,11 @@ function retrieveData() {
                 alert(JSON.stringify(response);
                 processUser('me');
                 for (var i = 0; i < response.data.length; i++)
-                    processUser(data[i].id);
+                    processUser(response.data[i].id);
             }
         });          
 }
-*/
+
 function test() {
     FB.api(
         "/me?fields=id,birthday,education,gender,location,hometown,location,political,religion",
