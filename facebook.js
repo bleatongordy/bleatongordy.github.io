@@ -60,6 +60,7 @@ function post() {
         });
 }
 
+function processUser(id) {}
 
 function Process() {
     FB.api(
@@ -76,8 +77,6 @@ function Process() {
             }
         });          
 }
-
-function processUser(id) {}
 
 /*
 function processUser(id) {
