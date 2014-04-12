@@ -48,11 +48,11 @@ function educationVector(education) {
     var eduvalue = 0;
     for (var i = 0; i < education.length; i++)
     {
-        if (education[i].name == 'High School' && eduvalue == 0)
+        if (education[i] == 'High School' && eduvalue == 0)
             eduvalue = 0.3;
-        if (education[i].name == 'College' && eduvalue <= 0.3)
+        if (education[i] == 'College' && eduvalue <= 0.3)
             eduvalue = 0.6;
-        if (education[i].name == 'Graduate School' && eduvalue <= 0.6)
+        if (education[i] == 'Graduate School' && eduvalue <= 0.6)
             eduvalue = 1.0;
     }
     return eduvalue;
