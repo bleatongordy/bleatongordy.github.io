@@ -83,6 +83,9 @@ function addUser(data) {
     Current[5] = actionVector(data['books'], data['movies'], data['television']);
     Current[6] = mysteryVector(data['books'], data['movies'], data['television']);
     Current[7] = sportsVector(data['sports']);
+    
+    alert('Halfway');
+    
     Current[8] = ageVector(data['birthday']);
     Current[9] = religionVector(data['religion']);
     Current[10] = educationVector(data['education']);
