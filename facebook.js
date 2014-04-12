@@ -83,18 +83,53 @@ function post() {
 
 
 
-function processResponse(id, response0, response1, response2, response3, response4) {
+function processResponse(response0, response1, response2, response3, response4) {
+    
     alert(JSON.stringify(response0));
     alert(JSON.stringify(response1));
     alert(JSON.stringify(response2));
     alert(JSON.stringify(response3));
     alert(JSON.stringify(response4));
+    
+    var data = new Array();
+    data['name'] = response0.name;
+    data['id'] = response0.id;
+    data['birthday'] = response0.birthday;
+    data['gender'] = response0.gender;
+    data['education'] = new Array();
+    for(var i = 0; i < response0.education.length; i++)
+        data['education'][i] = response0.education[i].name;
+    data['location'] = response0.location.name;
+    data['hometown'] = response0.hometown.name;
+    data['religion'] = response0.religion;
+    data['politics'] = response0.political;
+    data['sports'] = new Array();
+    for(var i = 0; i < response0.favorite_teams.length; i++)
+        data['sports'][i] = response0.favorite_teams[i].name;
+    
+    data['books'] = new Array();
+    for(var i = 0; i < response1.data.length; i++)
+        data['books'][i] = response1.data[i].name;
+    
+    data['movies'] = new Array();
+    for(var i = 0; i < response2.data.length; i++)
+        data['movies'][i] = response2.data[i].name;
+    
+    data['music'] = new Array();
+    for(var i = 0; i < response3.data.length; i++)
+        data['music'][i] = response3.data[i].name;
+    
+    data['television'] = new Array();
+    for(var i = 0; i < response4.data.length; i++)
+        data['television'][i] = response4.data[i].name;
+    
+    return data;
     // send data
 }
 
 function processUser(id) {
     FB.api(
-        '/' + id + '?fields=id,birthday,education,gender,location,hometown,location,political,religion,favorite_teams',
+        '/' + id + '?fields=name,id,birthday,education,gender,location,hometown,location,political,religion,favorite_teams',
         function (response0) {
             FB.api(
                '/' + id + '/books',
@@ -108,7 +143,7 @@ function processUser(id) {
                                   FB.api(
                                     '/' + id + '/television',
                                     function (response4) {
-                                        processResponse(id, response0, response1, response2, response3, response4);
+                                        processResponse(response0, response1, response2, response3, response4);
                                     });
                               });
                      });
@@ -136,7 +171,7 @@ function test() {
     FB.api(
         "/me?fields=id,birthday,education,gender,location,hometown,location,political,religion",
         function(response) {
-            processResponse(response, response, response, response, response, response);
+            processResponse(response, response, response, response, response);
         });
 }
 
