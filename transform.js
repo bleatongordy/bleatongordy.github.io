@@ -29,6 +29,9 @@ function ageVector(birthday) {
 }
 
 function politicalVector(politics) {
+    
+    alert(politics);
+    
     if (politics.toLowerCase().indexOf('demo') >= 0)
         return 1;
     else if (politics.toLowerCase().indexOf('repub'))
