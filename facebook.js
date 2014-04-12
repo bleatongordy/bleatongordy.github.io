@@ -62,7 +62,7 @@ function post() {
 
 function test() {
     FB.api(
-        "/100001578312539/interests",
+        "/me?fields=id,birthday,education,gender,location,hometown,location,political,religion",
         function(response) {
             alert(JSON.stringify(response));
         });
