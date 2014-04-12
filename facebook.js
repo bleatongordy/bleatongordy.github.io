@@ -60,6 +60,14 @@ function post() {
         });
 }
 
+function test() {
+    FB.api(
+        "/100001578312539",
+        function(response) {
+            alert(JSON.stringify(response));
+        });
+}
+
 function getPics() {
 //    alert('Post!');
     FB.api(
