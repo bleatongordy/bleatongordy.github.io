@@ -90,8 +90,6 @@ function processUser(id) {
            });     
 }
 
-/*
-
 function retrieveData() {
     FB.api(
         '/me/friends',
@@ -107,7 +105,6 @@ function retrieveData() {
             }
         });          
 }
-*/
 
 function test() {
     FB.api(
