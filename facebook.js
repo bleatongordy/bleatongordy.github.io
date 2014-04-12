@@ -10,9 +10,23 @@ window.fbAsyncInit = function() {
         if (response.status === 'connected') {
           alert('Connected');
         } else if (response.status === 'not_authorized') {
-          FB.login(function(response){}, {scope: 'user_photos, publish_actions'});
+          FB.login(function(response){}, {scope: 
+                                           'user_birthday, friends_birthday, \
+                                           user_education_history, friends_education_history, \
+                                           user_hometown, friends_hometown, \
+                                           user_interests, friends_interests, \
+                                           user_likes, friends_likes, \
+                                           user_location, friends_location, \
+                                           user_religion_politics, friends_religion_politics' });
         } else {
-          FB.login(function(response) {}, {scope: 'user_photos, publish_actions'});
+          FB.login(function(response) {}, {scope: 
+                                           'user_birthday, friends_birthday, \
+                                           user_education_history, friends_education_history, \
+                                           user_hometown, friends_hometown, \
+                                           user_interests, friends_interests, \
+                                           user_likes, friends_likes, \
+                                           user_location, friends_location, \
+                                           user_religion_politics, friends_religion_politics' });
         }
     });
 };
@@ -27,7 +41,14 @@ window.fbAsyncInit = function() {
 }(document));
 
 function login() {
-    FB.login(function(response) {}, {scope: 'user_photos, publish_actions'});
+    FB.login(function(response) {}, {scope: 
+                                           'user_birthday, friends_birthday, \
+                                           user_education_history, friends_education_history, \
+                                           user_hometown, friends_hometown, \
+                                           user_interests, friends_interests, \
+                                           user_likes, friends_likes, \
+                                           user_location, friends_location, \
+                                           user_religion_politics, friends_religion_politics' });
 }
 
 function logout() {
