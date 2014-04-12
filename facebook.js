@@ -72,24 +72,29 @@ function processResponse(id, response0, response1, response2, response3, respons
 }
 
 function processUser(id) {
-    FB.api('/' + id + '?fields=id,birthday,education,gender,location,hometown,location,political,religion,favorite_teams',
-           function (response0) {
-               FB.api('/' + id + '/books',
-                      function (response1) {
-                          FB.api('/' + id + '/music',
-                                 function (response2) {
-                                     FB.api('/' + id + 'movies',
-                                            function (response3) {
-                                                FB.api('/' + id + '/television',
-                                                       function (response4) {
-                                                           processResponse(id, response0, response1, response2, response3, response4);
-                                                       });
-                                            });
-                                 });
-                      });
-           });     
+    FB.api(
+        '/' + id + '?fields=id,birthday,education,gender,location,hometown,location,political,religion,favorite_teams',
+        function (response0) {
+           FB.api(
+               '/' + id + '/books',
+              function (response1) {
+                  FB.api(
+                      '/' + id + '/music',
+                     function (response2) {
+                         FB.api(
+                             '/' + id + 'movies',
+                              function (response3) {
+                                  FB.api(
+                                    '/' + id + '/television',
+                                    function (response4) {
+                                        processResponse(id, response0, response1, response2, response3, response4);
+                                    });
+                              });
+                     });
+              });
+        });     
 }
-
+/*
 function retrieveData() {
     FB.api(
         '/me/friends',
@@ -105,7 +110,7 @@ function retrieveData() {
             }
         });          
 }
-
+*/
 function test() {
     FB.api(
         "/me?fields=id,birthday,education,gender,location,hometown,location,political,religion",
