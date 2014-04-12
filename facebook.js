@@ -71,8 +71,6 @@ function processResponse(id, response0, response1, response2, response3, respons
     // send data
 }
 
-/*
-
 function processUser(id) {
     FB.api('/' + id + '?fields=id,birthday,education,gender,location,hometown,location,political,religion,favorite_teams',
            function (response0) {
@@ -92,7 +90,7 @@ function processUser(id) {
            });     
 }
 
-
+/*
 
 function retrieveData() {
     FB.api(
