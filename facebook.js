@@ -123,6 +123,7 @@ function processResponse(response0, response1, response2, response3, response4) 
     for(var i = 0; i < response4.data.length; i++)
         data['television'][i] = response4.data[i].name;
     
+    alert('hello');
     alert(data['television'][0]);
     alert(data['music'][0]);
     
