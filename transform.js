@@ -94,13 +94,17 @@ function addUser(data) {
     
     Alert('Religion');
     
-    Current[10] = educationVector(data['education']);
+    Current[10] = politicalVector(data['political']);
+    
+    Alert('Politics');
+    
+    Current[11] = educationVector(data['education']);
     
     alert('3/4 Way');
     
-    Current[11] = loudnessVector(data['music']);
-    Current[12] = popularityVector(data['music']);
-    Current[13] = tempoVector(data['music']);
+    Current[12] = loudnessVector(data['music']);
+    Current[13] = popularityVector(data['music']);
+    Current[14] = tempoVector(data['music']);
     
     alert(Current[0]);
     alert(Current[1]);
@@ -116,6 +120,7 @@ function addUser(data) {
     alert(Current[11]);
     alert(Current[12]);
     alert(Current[13]);
+    alert(Current[14]);
     // send data to graph
 }
 
