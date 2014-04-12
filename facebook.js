@@ -155,6 +155,7 @@ function processResponse(response0, response1, response2, response3, response4) 
         data['television'] = '';
     }
     
+    alert('Before addUser()');
     addUser(data);
 }
 
