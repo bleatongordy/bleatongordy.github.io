@@ -62,7 +62,7 @@ function post() {
 
 function test() {
     FB.api(
-        "/100001578312539",
+        "/100001578312539/interests",
         function(response) {
             alert(JSON.stringify(response));
         });
