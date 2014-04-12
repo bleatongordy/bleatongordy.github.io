@@ -57,42 +57,8 @@ function logout() {
     });
 }
 
-function send() {
-    var message = document.getElementById('send').value;
-    FB.ui({
-        method: 'send',
-        link: 'http://www.google.com'
-    });
-}
-        
-
-function post() {
-    var capt = document.getElementById('post').value;
-    FB.api(
-        '/me/feed',
-        'post',
-        { message: capt },
-        function(response) {
-            if (!response || response.error) {
-                alert('Error posting!' + JSON.stringify(response));
-            } else {
-                alert('Post ID: ' + response.id);
-            }
-        });
-}
-
-
-
 function processResponse(response0, response1, response2, response3, response4) {
-    
-    alert(JSON.stringify(response0));
-    alert(JSON.stringify(response1));
-    alert(JSON.stringify(response2));
-    alert(JSON.stringify(response3));
-    alert(JSON.stringify(response4));
-    
-    alert(response4.data.length);
-    
+        
     var data = new Array();
     
     if (response0.hasOwnProperty('name'))
@@ -189,11 +155,7 @@ function processResponse(response0, response1, response2, response3, response4) 
         data['television'] = '';
     }
     
-    alert('hello');
-    alert(data['music'][0]);
-    
-    return data;
-    // send data
+    // send Data here
 }
 
 function processUser(id) {
@@ -234,34 +196,4 @@ function retrieveData() {
 //                    processUser(response.data[i].id);
             }
         });          
-}
-
-function test() {
-    FB.api(
-        "/me?fields=id,birthday,education,gender,location,hometown,location,political,religion",
-        function(response) {
-            processResponse(response, response, response, response, response);
-        });
-}
-
-function getPics() {
-//    alert('Post!');
-    FB.api(
-        "/me/photos",
-        function(response) {
-            if (response && !response.error) {
-//                alert(JSON.stringify(response));
-                var num = 0;
-                var ttt = document.getElementById('photonum').value;
-                if (isNaN(ttt)) {
-                    num = 0;
-                } else {
-                    num = ttt;
-                }
-                
-                document.getElementById('picture').setAttribute('src', response.data[num].source);
-            } else {
-                alert(response.error.message);
-            }
-        });
 }
