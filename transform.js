@@ -43,7 +43,7 @@ function religionVector(religion) {
 
 function educationVector(education) {
     
-    alert(education);
+    alert(education + education.length);
     
     var eduvalue = 0;
     for (var i = 0; i < education.length; i++)
