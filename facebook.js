@@ -100,7 +100,7 @@ function retrieveData() {
                 // send Length()
                 alert(JSON.stringify(response);
                 processUser('me');
-                for (int i = 0; i < response.data.length; i++)
+                for (var i = 0; i < response.data.length; i++)
                     processUser(data[i].id);
             }
         });          
