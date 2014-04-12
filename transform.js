@@ -87,7 +87,13 @@ function addUser(data) {
     alert('Halfway');
     
     Current[8] = ageVector(data['birthday']);
+    
+    alert('Age');
+    
     Current[9] = religionVector(data['religion']);
+    
+    Alert('Religion');
+    
     Current[10] = educationVector(data['education']);
     
     alert('3/4 Way');
