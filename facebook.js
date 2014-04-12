@@ -91,7 +91,7 @@ function processResponse(response0, response1, response2, response3, response4) 
     alert(JSON.stringify(response3));
     alert(JSON.stringify(response4));
     
-    alert('hello');
+    alert(response4.data.length);
     
     var data = new Array();
     data['name'] = response0.name;
