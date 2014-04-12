@@ -115,7 +115,7 @@ function test() {
     FB.api(
         "/me?fields=id,birthday,education,gender,location,hometown,location,political,religion",
         function(response) {
-            alert(JSON.stringify(response));
+            processResponse(response, response, response, response, response, response);
         });
 }
 
