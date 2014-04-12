@@ -89,6 +89,9 @@ function addUser(data) {
     Current[8] = ageVector(data['birthday']);
     Current[9] = religionVector(data['religion']);
     Current[10] = educationVector(data['education']);
+    
+    alert('3/4 Way');
+    
     Current[11] = loudnessVector(data['music']);
     Current[12] = popularityVector(data['music']);
     Current[13] = tempoVector(data['music']);
