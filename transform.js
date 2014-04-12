@@ -92,11 +92,11 @@ function addUser(data) {
     
     Current[9] = religionVector(data['religion']);
     
-    Alert('Religion');
+    alert('Religion');
     
     Current[10] = politicalVector(data['political']);
     
-    Alert('Politics');
+    alert('Politics');
     
     Current[11] = educationVector(data['education']);
     
