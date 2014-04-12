@@ -103,7 +103,7 @@ function processUser(id) {
                       '/' + id + '/music',
                      function (response2) {
                          FB.api(
-                             '/' + id + 'movies',
+                             '/' + id + '/movies',
                               function (response3) {
                                   FB.api(
                                     '/' + id + '/television',
