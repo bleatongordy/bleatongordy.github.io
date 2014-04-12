@@ -29,9 +29,6 @@ function ageVector(birthday) {
 }
 
 function politicalVector(politics) {
-    
-    alert(politics);
-    
     if (politics.toLowerCase().indexOf('demo') >= 0)
         return 1;
     else if (politics.toLowerCase().indexOf('repub'))
@@ -45,6 +42,9 @@ function religionVector(religion) {
 }
 
 function educationVector(education) {
+    
+    alert(education);
+    
     var eduvalue = 0;
     for (var i = 0; i < education.length; i++)
     {
