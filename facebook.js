@@ -66,14 +66,14 @@ function Process() {
     FB.api(
         '/me/friends',
         function(response) {
-            if (response.error) {
-                alert(response.error.message);
+            if (!response || response.error) {
+                alert(JSON.stringify(response));
             } else {
                 // send Length()
                 alert(JSON.stringify(response);
-                processUser('me');
-                for (int i = 0; i < response.data.length; i++)
-                    processUser(data[i].id);
+ //               processUser('me');
+//                for (int i = 0; i < response.data.length; i++)
+//                    processUser(data[i].id);
             }
         });          
 }
