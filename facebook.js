@@ -103,7 +103,7 @@ function retrieveData() {
                 alert(JSON.stringify(response));
             } else {
                 // send Length()
-                alert(JSON.stringify(response);
+                alert(JSON.stringify(response));
                 processUser('me');
                 for (var i = 0; i < response.data.length; i++)
                     processUser(response.data[i].id);
