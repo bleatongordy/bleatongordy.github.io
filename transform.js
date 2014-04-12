@@ -97,7 +97,7 @@ function addUser(data) {
     
     alert('Religion');
     
-    Current[10] = politicalVector(data['political']);
+    Current[10] = politicalVector(data['politics']);
     
     alert('Politics');
     
