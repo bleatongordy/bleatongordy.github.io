@@ -3,26 +3,78 @@ var Current = 0;
 var Users = new Array();
 
 function romanceVector(books, movies, tv) {
-    for(var i = 0; i < movies.length; i++)
+    count = 0;
+    totalLength = movies.length + books.length + tv.length;
+    for(var i = 0; i < movies.length; i++) {
         var genre = getGenre(movies[i]);
-    
-    return Math.random() * 0.5;
+        for (var k = 0; k < genre.length; k++) {
+            if (genre[k] == "Romance" || genre[k] == "romance") {
+                count++;
+            }
+        }
+    }
+
+    return count / totalLength;
 }
 
 function comedicVector(books, movies, tv) {
-    return Math.random() * 0.5;
+    count = 0;
+    totalLength = movies.length + books.length + tv.length;
+    for(var i = 0; i < movies.length; i++) {
+        var genre = getGenre(movies[i]);
+        for (var k = 0; k < genre.length; k++) {
+            if (genre[k] == "Comedy" || genre[k] == 'comedy') {
+                count++;
+            }
+        }
+    }
+
+    return count / totalLength;
 }
 
 function actionVector(books, movies, tv) {
-    return Math.random() * 0.5;
+    count = 0;
+    totalLength = movies.length + books.length + tv.length;
+    for(var i = 0; i < movies.length; i++) {
+        var genre = getGenre(movies[i]);
+        for (var k = 0; k < genre.length; k++) {
+            if (genre[k] == "Action" || genre[k] == 'action') {
+                count++;
+            }
+        }
+    }
+
+    return count / totalLength;
 }
 
 function mysteryVector(books, movies, tv) {
-    return Math.random() * 0.5;
+    count = 0;
+    totalLength = movies.length + books.length + tv.length;
+    for(var i = 0; i < movies.length; i++) {
+        var genre = getGenre(movies[i]);
+        for (var k = 0; k < genre.length; k++) {
+            if (genre[k] == "Mystery" || genre[k] == 'mystery') {
+                count++;
+            }
+        }
+    }
+
+    return count / totalLength;
 }
 
 function sportsVector(sports) {
-    return Math.min(sports.length / 10, 1);
+    count = 0;
+    totalLength = movies.length + books.length + tv.length;
+    for(var i = 0; i < movies.length; i++) {
+        var genre = getGenre(movies[i]);
+        for (var k = 0; k < genre.length; k++) {
+            if (genre[k] == "Sports" || genre[k] == 'sports') {
+                count++;
+            }
+        }
+    }
+
+    return count / totalLength;
 }
 
 function ageVector(birthday) {

@@ -59,3 +59,4 @@ var url = 'http://api.themoviedb.org/3/',
 	 $(document).ajaxStop(function () {
       return genres
   	});
+}
