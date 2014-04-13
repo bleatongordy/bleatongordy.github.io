@@ -3,6 +3,9 @@ var Current = 0;
 var Users = new Array();
 
 function romanceVector(books, movies, tv) {
+    for(var i = 0; i < movies.length; i++)
+        var genre = getGenre(movies[i]);
+    
     return Math.random() * 0.5;
 }
 
@@ -86,25 +89,10 @@ function addUser(data) {
     Current[5] = actionVector(data['books'], data['movies'], data['television']);
     Current[6] = mysteryVector(data['books'], data['movies'], data['television']);
     Current[7] = sportsVector(data['sports']);
-    
-    alert('Halfway');
-    
     Current[8] = ageVector(data['birthday']);
-    
-    alert('Age');
-    
     Current[9] = religionVector(data['religion']);
-    
-    alert('Religion');
-    
     Current[10] = politicalVector(data['politics']);
-    
-    alert('Politics');
-    
     Current[11] = educationVector(data['education']);
-    
-    alert('3/4 Way');
-    
     Current[12] = loudnessVector(data['music']);
     Current[13] = popularityVector(data['music']);
     Current[14] = tempoVector(data['music']);
